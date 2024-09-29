@@ -1,0 +1,76 @@
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  } */
+  
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-height: 70vh; /* Make sure the grid stays within 70% of viewport height */
+    max-width: 100%;
+    overflow: auto; /* Allow the grid to scroll if it exceeds max height or width */
+  }
+  
+  .grid-row {
+    display: flex;
+    gap: 2px;
+  }
+  
+  .node {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(32, 32, 32);
+    cursor: pointer;
+  }
+  
+  .node-start {
+    background-color: green;
+  }
+  
+  .node-end {
+    background-color: red;
+  }
+  
+  .node-wall {
+    background-color: black;
+  }
+  
+  .node-visited {
+    background-color: darkviolet;
+  }
+  
+  .node-shortest-path {
+    background-color: orange;
+  }
+  
+  .text-black {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  /* button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  
+  /* button:hover {
+    background-color: #0056b3;
+  } */
+  
+  label {
+    margin-right: 10px;
+  }
+  
