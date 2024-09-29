@@ -200,7 +200,7 @@ const App = () => {
                         Reset Grid
                     </Button>
                 </div>
-                {isLoading && <p className='text-blue-600' >Loading...</p>}
+                {isLoading && <p className='text-blue-600' >Loading the shortest path...</p>}
                 {warning && <p className='text-red-700 text-lg font-semibold'>{warning}</p>}
             </div>
 
