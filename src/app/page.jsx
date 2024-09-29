@@ -24,7 +24,7 @@ export default function Home() {
           About us
         </button> */}
           <Link href="/about" className={buttonVariants({variant:"outline", className:"transition-colors hover:bg-zinc-900"})}>About us</Link>
-          <Link href="/List" className={buttonVariants({variant:"secondary", className:"transition-all bg-white text-black font-semibold hover:bg-slate-200"})}>Projects</Link>
+          <Link href="/Dijkstra" className={buttonVariants({variant:"secondary", className:"transition-all bg-white text-black font-semibold hover:bg-slate-200"})}>Projects</Link>
           {/* <Button variant="outline" ></Button> */}
           {/* <Button className="bg-white text-black font-semibold" ></Button> */}
         </div>
