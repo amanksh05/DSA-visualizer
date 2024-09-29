@@ -1,0 +1,118 @@
+/* styles/BackgroundAnimation.css */
+
+:root {
+    --cols: 12;
+    --rows: 12;
+    --body-size: calc(100vw + 100 / var(--cols));
+    --dot-size: 1.75vw;
+    --gutter: 3vw;
+    --line-weight: 2px;
+    --speed: 2.5s;
+    --bg: black;
+    --fg: white;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--body-size);
+    height: var(--body-size);
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.square {
+    position: relative;
+}
+
+.square::before,
+.square::after {
+    content: '';
+    position: absolute;
+    background: var(--fg);
+    border-radius: 4px;
+}
+
+.square::before {
+    top: 0;
+    left: calc(var(--dot-size) / 2 + var(--gutter) / 2);
+    width: calc(100% - var(--dot-size) - var(--gutter));
+    height: var(--line-weight);
+    transform: translateY(-50%);
+    animation: lineYpulse var(--speed) infinite alternate-reverse ease-in;
+}
+
+.square::after {
+    top: calc(var(--dot-size) / 2 + var(--gutter) / 2);
+    left: 0;
+    width: var(--line-weight);
+    height: calc(100% - var(--dot-size) - var(--gutter));
+    transform: translateX(-50%);
+    animation: lineXpulse var(--speed) infinite alternate-reverse ease-in;
+}
+
+.dot {
+    position: absolute;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background: var(--fg);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: dotPulse var(--speed) infinite alternate ease-in;
+}
+
+.dot:last-child {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation-direction: alternate-reverse;
+}
+
+@keyframes dotPulse {
+
+    0%,
+    35% {
+        transform: translate3d(-50%, -50%, 0) scale(0);
+    }
+
+    65%,
+    100% {
+        transform: translate3d(-50%, -50%, 0) scale(1);
+    }
+}
+
+@keyframes lineXpulse {
+
+    0%,
+    35% {
+        transform: translate3d(-50%, 0, 0) rotate(0deg);
+    }
+
+    65%,
+    100% {
+        transform: translate3d(-50%, 0, 0) rotate(90deg);
+    }
+}
+
+@keyframes lineYpulse {
+
+    0%,
+    35% {
+        transform: translate3d(0, -50%, 0) rotate(0deg);
+    }
+
+    65%,
+    100% {
+        transform: translate3d(0, -50%, 0) rotate(90deg);
+    }
+}
