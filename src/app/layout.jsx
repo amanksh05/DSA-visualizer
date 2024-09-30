@@ -30,8 +30,8 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`min-h-screen bg-black flex flex-col ${jakarta.className}`}>
         <Header />
-        <main className="flex-grow flex-1 flex items-center justify-center">
-          <CanvasBackground />
+        <main className="flex-grow w-screen  flex  justify-center">
+          {/* <CanvasBackground /> */}
           {/* <BackgroundAnimation/> */}
           {children}
         </main>

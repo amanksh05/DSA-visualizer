@@ -8,7 +8,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {/* <CanvasBackground /> */}
       <div className="flex flex-col items-center justify-center text-center gap-6 p-8 w-full">
 
         <div className="flex flex-col gap-6">
@@ -24,11 +23,12 @@ export default function Home() {
           About us
         </button> */}
           <Link href="/about" className={buttonVariants({variant:"outline", className:"transition-colors hover:bg-zinc-900"})}>About us</Link>
-          <Link href="/Dijkstra" className={buttonVariants({variant:"secondary", className:"transition-all bg-white text-black font-semibold hover:bg-slate-200"})}>Projects</Link>
+          <Link href="/List" className={buttonVariants({variant:"secondary", className:"transition-all bg-white text-black font-semibold hover:bg-slate-200"})}>Projects</Link>
           {/* <Button variant="outline" ></Button> */}
           {/* <Button className="bg-white text-black font-semibold" ></Button> */}
         </div>
       </div>
+      <CanvasBackground/>
     </>
   );
 }
