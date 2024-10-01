@@ -13,10 +13,11 @@ function page() {
       "desc": "Operating system concept",
       "link": "/least-recently-used"
     },
+    
   ]
 
   return (
-    <div className="grid grid-flow-col gap-5 mt-10">
+    <div className="flex flex-wrap gap-5 mt-10 justify-center">
       {
         list.map((item, key) => (
           <Card key={key} name={item.name} desc={item.desc} link={item.link} />
