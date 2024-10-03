@@ -9,10 +9,16 @@ function page() {
       "link": "/Dijkstra"
     },
     {
-      "name": "Least recently used",
+      "name": "Least recently used Cache",
       "desc": "Operating system concept",
       "link": "/least-recently-used"
     },
+    {
+      "name": "Sorting Algorithms ",
+      "desc": "Bubble Sort | insertion Sort | Selection Sort | Merge Sort",
+      "link": "/sorting-algorithms"
+    },
+    
     
   ]
 
